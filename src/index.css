@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --kero-accent: #d65d43;
+  --kero-accent-hover: #c04e36;
+  --kero-accent-soft: #fdf0ed;
+  --kero-accent-border: #f7d5cd;
+}
+
+[data-theme="indigo"] {
+  --kero-accent: #4353d6;
+  --kero-accent-hover: #3543ba;
+  --kero-accent-soft: #eef0fc;
+  --kero-accent-border: #d0d5f7;
+}
+
+[data-theme="emerald"] {
+  --kero-accent: #188c60;
+  --kero-accent-hover: #13724e;
+  --kero-accent-soft: #eaf7f2;
+  --kero-accent-border: #c2ebd9;
+}
+
+[data-theme="slate"] {
+  --kero-accent: #2c3e50;
+  --kero-accent-hover: #1e2b38;
+  --kero-accent-soft: #eef2f6;
+  --kero-accent-border: #cfd8e3;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f1f4f6;
+  color: #343a40;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.font-arial-12 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+.letter-paper {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  line-height: 1.0;
+  color: #000000;
+  background-color: #ffffff;
+  width: 210mm;
+  height: 297mm;
+  min-height: 297mm;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media print {
+  body.sprin-print-mode {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 12pt !important;
+    line-height: 1.0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body.sprin-print-mode .no-print {
+    display: none !important;
+  }
+
+  body.sprin-print-mode .print-only-container {
+    display: block !important;
+    position: static !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .letter-paper,
+  .letter-paper * {
+    font-family: Arial, Helvetica, sans-serif !important;
+  }
+
+  .print-page-sheet {
+    width: 210mm !important;
+    height: 296.5mm !important;
+    min-height: 296.5mm !important;
+    max-height: 296.5mm !important;
+    padding: 20mm 15mm 15mm 25mm !important;
+    font-size: 12pt !important;
+    line-height: 1.0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    transform: none !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    overflow: hidden !important;
+  }
+
+  .print-page-sheet:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

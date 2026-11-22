@@ -1,0 +1,6 @@
+{
+  "name": "KeroUI Dashboard",
+  "description": "Multi-purpose enterprise analytics and operations dashboard suite with interactive charts, portfolio tracking, helpdesk queues, and dynamic data tables.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
